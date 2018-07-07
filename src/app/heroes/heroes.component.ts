@@ -9,16 +9,16 @@ import { HeroesMock } from '../heroes-mock';
 })
 export class HeroesComponent implements OnInit {
 
-  private hero: Hero = {
-    id: 1,
-    name: 'Windstorm'
-  }
-
   private heroes: Hero[] = HeroesMock;
+  private selectedHero: Hero;
 
-  constructor() { }
+  constructor() { 
+  }
 
   ngOnInit() {
   }
-
+  
+  private onHeroClicked(hero: Hero) {
+    this.selectedHero = hero;  
+  }
 }
