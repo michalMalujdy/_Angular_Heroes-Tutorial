@@ -17,21 +17,4 @@
     </li>
 </ul>
 
-<div *ngIf="selectedHero != null && selectedHero != undefinied">
-    
-    <hr>
-    
-    <h2>{{selectedHero.name | uppercase}} Details:</h2>
-    <div><span>Id: </span>{{selectedHero.id}}</div>
-    <div><span>Name: </span>{{selectedHero.name}}</div>
-
-    <br>
-
-    <div>
-        <label>
-            Edit name
-            <input [(ngModel)]="selectedHero.name" placeholder="name">
-        </label>
-    </div>
-</div>
-
+<app-hero-detail [hero]="selectedHero"></app-hero-detail>
