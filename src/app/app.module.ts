@@ -9,6 +9,8 @@ import { HeroDetailComponent } from './hero-detail/hero-detail.component';
 import { HeroService } from './hero.service';
 import { LogsComponent } from './logs/logs.component';
 import { LogsService } from './logs.service';
+import { AppRoutingModule } from './/app-routing.module';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -16,10 +18,12 @@ import { LogsService } from './logs.service';
     HeroesComponent,
     HeroDetailComponent,
     LogsComponent,
+    DashboardComponent,
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    AppRoutingModule
   ],
   providers: [
     HeroService, 
