@@ -16,4 +16,9 @@ export class HeroService {
     this.logService.add('Hero collection has been retrieved');
     return of(HeroesMock);   
   }
+
+  getHero(id: number): Observable<Hero> {
+    this.logService.add(`Retrieved hero with id=${id}`)
+    return of(HeroesMock.find((hero) => hero.id === id));
+  }
 }

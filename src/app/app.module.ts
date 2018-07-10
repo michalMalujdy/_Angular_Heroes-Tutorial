@@ -11,6 +11,7 @@ import { LogsComponent } from './logs/logs.component';
 import { LogsService } from './logs.service';
 import { AppRoutingModule } from './/app-routing.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { ActivatedRoute } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
   ],
   providers: [
     HeroService, 
-    LogsService 
+    LogsService,
   ],
   bootstrap: [AppComponent]
 })
