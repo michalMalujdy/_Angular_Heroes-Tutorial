@@ -12,6 +12,9 @@ import { LogsService } from './logs.service';
 import { AppRoutingModule } from './/app-routing.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ActivatedRoute } from '@angular/router';
+import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { InMemoryDataService }  from './in-memory-data.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -24,7 +27,10 @@ import { ActivatedRoute } from '@angular/router';
   imports: [
     BrowserModule,
     FormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    HttpClientInMemoryWebApiModule
+      .forRoot(InMemoryDataService, { dataEncapsulation: false}),
   ],
   providers: [
     HeroService, 
